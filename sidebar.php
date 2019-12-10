@@ -1,4 +1,7 @@
-    <div class="top-menu w-100 d-lg-none text-center mb-3 py-1">
+
+<!-- sidebar -->
+
+<div class="top-menu w-100 d-lg-none pt-3 text-center mb-3 py-1">
         <a class="navbar-brand" href="<?php echo get_bloginfo('wpurl'); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/images/profile.png" alt=""></a>
         <h3><a class="title" href="<?php echo get_bloginfo('wpurl'); ?>/">John Fajardo</a></h3>
         <ul class="mr-auto list-inline text-center">
@@ -23,5 +26,10 @@
                 </ul>
             </div>
         </div>
-
+        <?php dynamic_sidebar('custom_sidebar'); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'Header Menu' ) ); ?>
+        
     </div>
+
+
+    <!-- sidebar -->
